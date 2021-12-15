@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let body = document.body
+
+      let titulo = document.createElement('h1')
+      document.body.appendChild(titulo)
+      titulo.innerText = 'Exercício 5.2 - JavaScript DOM'
+      titulo.classList.add('title')
+
+      let main = document.createElement('main')
+      body.appendChild(main)
+      main.classList.add('main-content')
+
+      let section = document.createElement('section')
+      main.appendChild(section)
+      section.classList.add('center-content')
+      section.style.background = 'green'
+
+      let texto = document.createElement('p')
+      section.appendChild(texto)
+      texto.innerText = 'afnfualdfjasdfnalifufaiuernfiurngfiruagniunghaingiudfjiufjoaijfoainmfgrfmtawoerfijmaçoei'
+
+      let a = document.createElement('section')
+      main.appendChild(a)
+      a.classList.add('left-content')
+
+      let b = document.createElement('section')
+      main.appendChild(b)
+      b.classList.add('right-content')
+      b.style.marginRight = 'auto'
+
+      let imagem = document.createElement('img')
+      imagem.src = 'https://picsum.photos/200'
+      a.appendChild(imagem)
+
+      let conteudo = ['um','dois','tres','quatro','cinco','seis','sete','oite','nove','dez']
+
+      let lista = document.createElement('ul')
+      for (let index = 0; index < conteudo.length; index++) {
+        var jg = conteudo[index]
+        var hm = document.createElement('li')
+        hm.innerText = jg
+        lista.appendChild(hm)
+      }
+      b.appendChild(lista)
+      
+      
+
+
+      for (let index = 0; index < 3; index++) {
+        let h3 = document.createElement('h3')
+        h3.classList.add('description')
+        main.appendChild(h3)
+      }
+
+      main.removeChild(a)
+
+    </script>
+  </body>
+</html>
