@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form action="" method="get" id="fa">
+    <fieldset>
+      <label for="nome">Coloque seu nome
+        <input type="text" id="nome" required maxlength="40">
+      </label>
+      <br>
+      <br>
+      <label for="email">Coloque seu e-mail
+        <input type="email" name="E-mail" id="email" required maxlength="50">
+      </label>
+      <br>
+      <br>
+      <label for="CPF">Coloque seu CPF
+        <input type="text" id='CPF' required maxlength="11">
+      </label>
+      <br>
+      <br>
+      <label for="end">Coloque seu endereço
+        <input type="text" id="end" required maxlength="200">
+      </label>
+      <br>
+      <br>
+      <label for="cidade">Coloque sua cidade
+        <input type="text" id="cidade" required maxlength="28">
+      </label>
+      <br>
+      <br>
+      <label for="est">Selecione seu Estado
+        <select name="Estado" id="est" required>
+        </select>
+      </label>
+      <br>
+      <br>
+      <input type="radio" name="mora" id="casa" required>
+      <label for="casa"> Casa
+      </label>
+      <br>
+      <br>
+      <input type="radio" name="mora" id="Apartamento" required>
+      <label for="Apartamento"> Apartamento
+      </label>
+    </fieldset>
+    <br>
+    <fieldset>
+      <label for="resumo">Resumo do currículo
+        <textarea name="resumo" id="resumo" cols="30" rows="10" required maxlength="1000"></textarea>
+      </label>
+      <br>
+      <br>
+      <label for="cargo">Coloque seu cargo
+        <input type="text" id="cargo" required maxlength="40">
+      </label>
+      <br>
+      <br>
+      <label for="des">Faça uma breve descrição do seu cargo
+        <input type="text" id="des" required maxlength="500">
+      </label>
+      <br>
+      <br>
+      <label for="data">
+        <input type="date" name="data" id="data" required>
+      </label>
+    </fieldset>
+    <br>
+    <br>
+    <div>
+      <button id="bot" type="submit">Enviar</button>
+      <button type="reset"></button>
+    </div>
+  </form>
+
+  <div id="k">
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
